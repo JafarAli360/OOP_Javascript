@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercise</title>
+  </head>
+  <body>
+    <p id="mobil"></p>
+  </body>
+  <script>
+    class mobil {
+      constructor(merek) {
+        this.merek = merek;
+      }
+    }
+    class model extends mobil {
+      constructor(jenis, merek) {
+        super(merek);
+        this.jenis = jenis;
+      }
+      introduce() {
+        return `Saya Memiliki ${this.merek}, yang berjenis ${this.jenis}`;
+      }
+    }
+    let Yamaha = new model("Avanza", "Xenia");
+
+    document.getElementById("mobil").innerHTML = Yamaha.introduce();
+  </script>
+</html>
